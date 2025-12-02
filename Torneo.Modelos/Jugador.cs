@@ -13,7 +13,7 @@ namespace Torneo.Modelos
         public int EquipoId { get; set; }
 
         // Propiedad de navegación
-        public Equipos Equipo { get; set; }
+        public Equipos? Equipo { get; set; }
         public int Goles { get; set; }
         public int TarjetasAmarillas { get; set; }
         public int TarjetasRojas { get; set; }
