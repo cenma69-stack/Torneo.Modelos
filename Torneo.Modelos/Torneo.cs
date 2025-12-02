@@ -10,6 +10,9 @@ namespace Torneo.Modelos
     internal class Torneo
     {
         [Key] public int ID { get; set; }  
+
+        public String fechaInicio { get; set; }
+        public String fechaFin { get; set; }    
         public string Nombre { get; set; }
 
         public string TipoId {  get; set; }
