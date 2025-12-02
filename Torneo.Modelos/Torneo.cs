@@ -15,7 +15,6 @@ namespace Torneo.Modelos
         public string TipoId {  get; set; }
         public int EquipoId {  get; set; }
 
-        //propiedad que establece la relación entre tablas 
         public TipoTorneo? TipoTorneo { get; set; }
 
     }
