@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Torneo.Modelos;
 
-    public class TorneoAPIContext : DbContext
+    public class TorneoAPIContext : DbContext 
     {
         public TorneoAPIContext (DbContextOptions<TorneoAPIContext> options)
             : base(options)
