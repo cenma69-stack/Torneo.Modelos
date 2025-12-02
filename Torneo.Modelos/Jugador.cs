@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace Torneo.Modelos
 {
     public class Jugador
     {
-        public int Id { get; set; }
+        [Key] public int Id { get; set; }
         public string Nombre { get; set; }
         public int EquipoId { get; set; }
 
-        // Propiedad de navegación
+        
         public Equipos? Equipo { get; set; }
         public int Goles { get; set; }
         public int TarjetasAmarillas { get; set; }
