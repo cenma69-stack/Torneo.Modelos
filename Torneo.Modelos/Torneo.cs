@@ -10,7 +10,13 @@ namespace Torneo.Modelos
     internal class Torneo
     {
         [Key] public int ID { get; set; }  
-        public string name { get; set; }
+        public string Nombre { get; set; }
+
+        public string TipoId {  get; set; }
+        public int EquipoId {  get; set; }
+
+        //propiedad que establece la relación entre tablas
+        public TipoTorneo? TipoTorneo { get; set; }
 
     }
 }
