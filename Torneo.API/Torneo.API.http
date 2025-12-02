@@ -1,0 +1,6 @@
+@Torneo.API_HostAddress = http://localhost:5208
+
+GET {{Torneo.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
