@@ -9,6 +9,13 @@ namespace Torneo.Modelos
 {
     internal class Torneo
     {
-        [Key] public int ID { get; set; } 
+        [Key] public int ID { get; set; }  
+        public string Nombre { get; set; }
+
+        public string TipoId {  get; set; }
+        public int EquipoId {  get; set; }
+
+        public TipoTorneo? TipoTorneo { get; set; }
+
     }
 }
