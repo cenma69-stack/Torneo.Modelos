@@ -9,6 +9,6 @@ namespace Torneo.Modelos
 {
     internal class Torneo
     {
-        [Key] public int ID { get; set; }
+        [Key] public int ID { get; set; } 
     }
 }
