@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Torneo.API
 {
@@ -6,6 +10,9 @@ namespace Torneo.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            //builder.Services.AddDbContext<Torneo.APIContext>(options =>
+            //   options.UseNpgsql(builder.Configuration.GetConnectionString("Torneo.APIContext.postgresql") ?? throw new InvalidOperationException("Connection string 'TorneoAPIContext' not found."))
+            //   );
 
             // Add services to the container.
 
@@ -17,7 +24,7 @@ namespace Torneo.API
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            //if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
