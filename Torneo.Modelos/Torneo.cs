@@ -22,7 +22,7 @@ namespace Torneo.Modelos
                 
         public ICollection<TorneoEquipo> Equipos { get; set; }
 
-        public ICollection<Partido> Partido { get; set; } 
+        public ICollection<Partido> Partido { get; set; }
 
-    }
+        }
 }
