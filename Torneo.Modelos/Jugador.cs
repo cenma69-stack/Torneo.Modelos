@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Torneo.Modelos
 {
-    internal class Jugador
+    public class Jugador
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

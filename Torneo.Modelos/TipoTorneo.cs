@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Torneo.Modelos
 {
-    internal class TipoTorneo
+    public class TipoTorneo
     {
         [Key] public int Id { get; set; }
         public string tipo {  get; set; }
