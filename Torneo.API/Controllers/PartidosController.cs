@@ -69,7 +69,7 @@ namespace Torneo.API.Controllers
                 }
             }
 
-            return NoContent();
+            return NoContent(); 
         }
 
         // POST: api/Partidos

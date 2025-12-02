@@ -11,7 +11,7 @@ namespace Torneo.API
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<TorneoAPIContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("TorneoAPIContext") ?? throw new InvalidOperationException("Connection string 'TorneoAPIContext' not found.")));
+                options.UseNpgsql(builder.Configuration.GetConnectionString("TorneoAPIContext") ?? throw new InvalidOperationException("Connection string 'TorneoAPIContext' not found.")));
             //builder.Services.AddDbContext<Torneo.APIContext>(options =>
             //   options.UseNpgsql(builder.Configuration.GetConnectionString("Torneo.APIContext.postgresql") ?? throw new InvalidOperationException("Connection string 'TorneoAPIContext' not found."))
             //   );
