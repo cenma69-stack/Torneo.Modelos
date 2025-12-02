@@ -24,14 +24,14 @@ namespace Torneo.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Torneo.Modelos.Torneo>>> GetTorneo()
         {
-            return await _context.Torneos.ToListAsync();
+            return await _context.Torneo.ToListAsync();
         }
 
         // GET: api/Torneos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Torneo.Modelos.Torneo>> GetTorneo(int id)
         {
-            var torneo = await _context.Torneos.FindAsync(id);
+            var torneo = await _context.Torneo.FindAsync(id);
 
             if (torneo == null)
             {
@@ -77,7 +77,7 @@ namespace Torneo.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Torneo.Modelos.Torneo>> PostTorneo(Torneo.Modelos.Torneo torneo)
         {
-            _context.Torneos.Add(torneo);
+            _context.Torneo.Add(torneo);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetTorneo", new { id = torneo.ID }, torneo);
@@ -87,13 +87,13 @@ namespace Torneo.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTorneo(int id)
         {
-            var torneo = await _context.Torneos.FindAsync(id);
+            var torneo = await _context.Torneo.FindAsync(id);
             if (torneo == null)
             {
                 return NotFound();
             }
 
-            _context.Torneos.Remove(torneo);
+            _context.Torneo.Remove(torneo);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace Torneo.API.Controllers
 
         private bool TorneoExists(int id)
         {
-            return _context.Torneos.Any(e => e.ID == id);
+            return _context.Torneo.Any(e => e.ID == id);
         }
     }
 }

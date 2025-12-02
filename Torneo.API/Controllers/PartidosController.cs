@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Torneo.Modelos;
 
 namespace Torneo.API.Controllers
-{
+{ 
     [Route("api/[controller]")]
     [ApiController]
     public class PartidosController : ControllerBase
